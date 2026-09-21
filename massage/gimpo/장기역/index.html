@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <base href="/massage/gimpo/">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>김포 장기역 마사지 | 일상형 리프레시밸런스 생활안내</title>
+  <meta name="description" content="김포 장기역 마사지 관련 내용을 지역별로 보기 쉽게 정리했습니다. 인근 지역과 세부 위치 정보를 비교하며 원하는 지역 안내를 살펴볼 수 있습니다.">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="휴식컴포트 마사지 - 장기역 | 김포 지역 정보">
+  <meta property="og:description" content="휴식컴포트 마사지 관련 내용을 김포 장기역 기준으로 안내합니다. 대곶면·김포본동 등 같은 시·군의 지역 정보도 함께 살펴볼 수 있습니다.">
+  <meta property="og:image" content="https://gimpo-uijeongbu-massage.netlify.app/assets/images/angel-pages/angel-195.png">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="canonical" href="https://gimpo-uijeongbu-massage.netlify.app/massage/gimpo/장기역/">
+  <meta name="twitter:image" content="https://gimpo-uijeongbu-massage.netlify.app/assets/images/angel-pages/angel-195.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta name="twitter:title" content="장기역 출장마사지 | 김포시 이용 안내 및 지역 정보">
+  <meta name="twitter:description" content="장기역 출장마사지 이용을 알아보는 분을 위해 기본 안내와 사전 확인사항을 모았습니다. 김포시 안에서 필요한 내용을 현재 지역 중심으로 살펴볼 수 있습니다.">
+
+<style id="station-card-display-fix">
+.region-grid .station-card{
+    background:#30443a !important;
+    border:2px solid #c7a767 !important;
+    min-height:82px !important;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    cursor:default !important;
+}
+.region-grid .station-card strong{
+    color:#fff1c9 !important;
+    font-size:18px !important;
+    font-weight:900 !important;
+    text-align:center !important;
+}
+.region-grid .station-card::before{
+    content:"●";
+    color:#d6b46d;
+    font-size:10px;
+    margin-right:7px;
+}
+</style>
+
+<style id="dong-station-main-style">
+
+/* 동/역 전체 카드 영역 */
+.region-grid{
+    gap:14px !important;
+}
+
+
+/* 동 카드 - 기존 URL 그대로 사용 */
+.region-grid a.region-card{
+    min-height:100px !important;
+    padding:18px 16px !important;
+    background:#eee6d4 !important;
+    border:1px solid #cfc2a5 !important;
+    border-radius:10px !important;
+
+    display:flex !important;
+    flex-direction:column !important;
+    align-items:center !important;
+    justify-content:center !important;
+
+    text-decoration:none !important;
+    transition:0.2s ease !important;
+}
+
+
+/* 동 이름 */
+.region-grid a.region-card strong{
+    font-size:19px !important;
+    line-height:1.3 !important;
+    font-weight:900 !important;
+    color:#252a24 !important;
+    text-align:center !important;
+}
+
+
+/* 동 카드 인기업체 글자 */
+.region-grid a.region-card span{
+    display:block !important;
+    margin-top:7px !important;
+    font-size:14px !important;
+    line-height:1.3 !important;
+    font-weight:700 !important;
+    color:#8a642a !important;
+}
+
+
+/* 동 URL 카드 마우스 올림 */
+.region-grid a.region-card:hover{
+    background:#313a32 !important;
+    border-color:#313a32 !important;
+    transform:translateY(-2px) !important;
+}
+
+.region-grid a.region-card:hover strong{
+    color:#ffffff !important;
+}
+
+.region-grid a.region-card:hover span{
+    color:#f2d89b !important;
+}
+
+
+/* 역 카드 */
+.region-grid .station-card{
+    min-height:100px !important;
+    padding:18px 16px !important;
+
+    background:#38473e !important;
+    border:2px solid #b89b62 !important;
+    border-radius:10px !important;
+
+    display:flex !important;
+    flex-direction:column !important;
+    align-items:center !important;
+    justify-content:center !important;
+}
+
+
+/* 역 이름 */
+.region-grid .station-card strong{
+    font-size:19px !important;
+    line-height:1.3 !important;
+    font-weight:900 !important;
+    color:#fff2cf !important;
+    text-align:center !important;
+}
+
+
+/* 역 보조문구 */
+.region-grid .station-card span{
+    display:block !important;
+    margin-top:7px !important;
+    font-size:13px !important;
+    font-weight:700 !important;
+    color:#d9c18d !important;
+}
+
+
+/* 역 표시 점 */
+.region-grid .station-card::before{
+    content:"● 역";
+    display:block !important;
+    margin-bottom:6px !important;
+    font-size:12px !important;
+    font-weight:800 !important;
+    color:#d9b765 !important;
+}
+
+
+/* 휴대폰 */
+@media(max-width:700px){
+
+    .region-grid a.region-card,
+    .region-grid .station-card{
+        min-height:84px !important;
+        padding:14px 10px !important;
+    }
+
+    .region-grid a.region-card strong,
+    .region-grid .station-card strong{
+        font-size:17px !important;
+    }
+
+    .region-grid a.region-card span,
+    .region-grid .station-card span{
+        font-size:12px !important;
+    }
+}
+
+</style>
+
+<style id="all-region-main-style">
+
+/* =================================
+   시·군 / 구 / 동·읍·면 공통 상단
+   ================================= */
+
+/* 작은 상단 안내 */
+main section:first-of-type .eyebrow,
+main section:first-of-type .label,
+main section:first-of-type .kicker{
+    font-size:14px !important;
+    line-height:1.4 !important;
+    font-weight:800 !important;
+    letter-spacing:1.4px !important;
+    color:#69572d !important;
+}
+
+
+/* 큰 제목 - 대표페이지 비율 */
+main section:first-of-type h1{
+    font-size:clamp(32px,3.5vw,44px) !important;
+    line-height:1.28 !important;
+    letter-spacing:-1.4px !important;
+    font-weight:900 !important;
+    max-width:760px !important;
+    margin:16px 0 20px !important;
+}
+
+
+/* 제목 아래 설명 */
+main section:first-of-type h1 + p{
+    font-size:17px !important;
+    line-height:1.75 !important;
+    letter-spacing:-0.3px !important;
+    font-weight:600 !important;
+    max-width:720px !important;
+    margin-bottom:28px !important;
+}
+
+
+/* 모든 인기업체 외부 URL 버튼 */
+a[href*="gunmachonsa.shop"]{
+    display:inline-flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    gap:10px !important;
+
+    min-height:58px !important;
+    padding:15px 25px !important;
+
+    background:#30382f !important;
+    color:#fff0c8 !important;
+
+    border:2px solid #30382f !important;
+    border-radius:8px !important;
+
+    font-size:18px !important;
+    line-height:1.3 !important;
+    font-weight:900 !important;
+    letter-spacing:-0.4px !important;
+
+    text-decoration:none !important;
+}
+
+
+/* URL 버튼 마우스 올림 */
+a[href*="gunmachonsa.shop"]:hover{
+    background:#b38d4e !important;
+    border-color:#b38d4e !important;
+    color:#ffffff !important;
+}
+
+
+/* =========================
+   동 카드
+   ========================= */
+
+.region-grid a.region-card{
+    min-height:100px !important;
+    padding:18px 15px !important;
+
+    background:#eee6d4 !important;
+    border:1px solid #cfc2a5 !important;
+    border-radius:10px !important;
+
+    display:flex !important;
+    flex-direction:column !important;
+    justify-content:center !important;
+    align-items:center !important;
+
+    text-decoration:none !important;
+}
+
+.region-grid a.region-card strong{
+    font-size:19px !important;
+    line-height:1.3 !important;
+    font-weight:900 !important;
+    color:#252a24 !important;
+}
+
+.region-grid a.region-card span{
+    margin-top:7px !important;
+    font-size:14px !important;
+    font-weight:800 !important;
+    color:#8a642a !important;
+}
+
+
+/* =========================
+   역 카드
+   ========================= */
+
+.region-grid .station-card{
+    min-height:100px !important;
+    padding:18px 15px !important;
+
+    background:#38473e !important;
+    border:2px solid #b89b62 !important;
+    border-radius:10px !important;
+
+    display:flex !important;
+    flex-direction:column !important;
+    align-items:center !important;
+    justify-content:center !important;
+}
+
+.region-grid .station-card strong{
+    font-size:19px !important;
+    line-height:1.3 !important;
+    font-weight:900 !important;
+    color:#fff2cf !important;
+}
+
+.region-grid .station-card span{
+    margin-top:6px !important;
+    font-size:13px !important;
+    font-weight:700 !important;
+    color:#d9c18d !important;
+}
+
+.region-grid .station-card::before{
+    content:"● 역";
+    font-size:12px !important;
+    font-weight:900 !important;
+    color:#d9b765 !important;
+    margin-bottom:6px !important;
+}
+
+
+/* 모바일 */
+@media(max-width:700px){
+
+    main section:first-of-type h1{
+        font-size:29px !important;
+        line-height:1.3 !important;
+    }
+
+    main section:first-of-type h1 + p{
+        font-size:16px !important;
+        line-height:1.7 !important;
+    }
+
+    a[href*="gunmachonsa.shop"]{
+        min-height:52px !important;
+        padding:13px 18px !important;
+        font-size:16px !important;
+    }
+
+    .region-grid a.region-card,
+    .region-grid .station-card{
+        min-height:84px !important;
+    }
+
+    .region-grid a.region-card strong,
+    .region-grid .station-card strong{
+        font-size:17px !important;
+    }
+}
+
+</style>
+  <meta property="og:url" content="https://gimpo-uijeongbu-massage.netlify.app/gimpo/">
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="logo" href="/">경기마사지</a>
+
+      <nav class="main-nav" aria-label="주요 메뉴">
+        <a href="#business-trip">출장마사지</a>
+        <a href="#regions">지역 전체보기</a>
+        <a href="#guide">이용안내</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+        <section class="region-window">
+      <div class="region-window__copy">
+        <p class="region-window__label">경기 출장마사지 지역 안내</p>
+        <h1>김포 장기역 마사지</h1>
+<p class="region-window__text">김포시 범위에서 장기역 페이지의 위치를 쉽게 구분할 수 있도록, 현재 페이지와 같은 행정권의 선택지를 비교하기 쉽게 정돈하고 지역별 정보를 순서대로 살펴볼 수 있게 정리했습니다.</p>
+        <a class="region-window__cta" href="https://www.gunmachonsa.shop/Gimposi" target="_blank" rel="nofollow noopener noreferrer">김포시 인기업체 바로가기</a>
+      </div>
+      <div class="region-window__visual">
+        <img src="/assets/images/angel-pages/angel-195.png" alt="김포 경기 지역 안내">
+      </div>
+    </section>
+
+    <section id="business-trip" class="service-section">
+      <div class="section-heading">
+        <span class="section-number">14</span>
+        <div>
+          <p class="section-label">BUSINESS TRIP MASSAGE</p>
+          <h2>김포시 읍·면·동별 카테고리</h2>
+          <p>원하는 읍·면·동을 선택하면 해당 지역의 상세 페이지로 연결됩니다.</p>
+        </div>
+      </div>
+
+      <div class="region-grid">
+        <a class="region-card" href="/massage/gimpo/gochoneup/">
+          <strong>고촌읍</strong>
+          <span>김포시 지역 안내 보기</span>
+        </a>
+        <a class="region-card" href="/massage/gimpo/guraedong/">
+          <strong>구래동</strong>
+          <span>인기업체</span>
+        </a>
+        <a class="region-card" href="/massage/gimpo/gimpobondong/">
+          <strong>김포본동</strong>
+          <span>인기업체</span>
+        </a>
+        <a class="region-card" href="/massage/gimpo/daegotmyeon/">
+          <strong>대곶면</strong>
+          <span>김포시 지역 안내 보기</span>
+        </a>
+        <a class="region-card" href="/massage/gimpo/masandong/">
+          <strong>마산동</strong>
+          <span>인기업체</span>
+        </a>
+        <a class="region-card" href="/massage/gimpo/saudong/">
+          <strong>사우동</strong>
+          <span>인기업체</span>
+        </a>
+        <a class="region-card" href="/massage/gimpo/yangchoneup/">
+          <strong>양촌읍</strong>
+          <span>김포시 지역 안내 보기</span>
+        </a>
+        <a class="region-card" href="/massage/gimpo/unyangdong/">
+          <strong>운양동</strong>
+          <span>인기업체</span>
+        </a>
+        <a class="region-card" href="/massage/gimpo/wolgotmyeon/">
+          <strong>월곶면</strong>
+          <span>김포시 지역 안내 보기</span>
+        </a>
+        <a class="region-card" href="/massage/gimpo/janggidong/">
+          <strong>장기동</strong>
+          <span>인기업체</span>
+        </a>
+        <a class="region-card" href="/massage/gimpo/janggibondong/">
+          <strong>장기본동</strong>
+          <span>인기업체</span>
+        </a>
+        <a class="region-card" href="/massage/gimpo/tongjineup/">
+          <strong>통진읍</strong>
+          <span>김포시 지역 안내 보기</span>
+        </a>
+        <a class="region-card" href="/massage/gimpo/pungmudong/">
+          <strong>풍무동</strong>
+          <span>인기업체</span>
+        </a>
+        <a class="region-card" href="/massage/gimpo/haseongmyeon/">
+          <strong>하성면</strong>
+          <span>김포시 지역 안내 보기</span>
+        </a>
+      
+        <!-- station-cards:start -->
+
+
+
+
+<!-- station-cards:end -->
+</div>
+    </section>
+
+        <div class="section-external-cta">
+      <a class="region-window__cta" href="https://www.gunmachonsa.shop/Gimposi" target="_blank" rel="nofollow noopener noreferrer">김포시 인기업체 바로가기</a>
+    </div>
+
+    <section id="guide" class="guide-section">
+      <div class="guide-box">
+        <p class="section-label">LOCAL CATEGORY GUIDE</p>
+        <h2>지역을 단계별로 선택하세요</h2>
+
+        <div class="guide-steps">
+          <div>
+            <span>1</span>
+            <strong>서비스 선택</strong>
+            <p>출장마사지 또는 스웨디시를 선택합니다.</p>
+          </div>
+
+          <div>
+            <span>2</span>
+            <strong>광역지역 선택</strong>
+            <p>서울, 경기, 인천 등 원하는 지역을 선택합니다.</p>
+          </div>
+
+          <div>
+            <span>3</span>
+            <strong>구·동 선택</strong>
+            <p>세부 지역 카테고리에서 관련 정보를 확인합니다.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <strong>경기마사지</strong>
+      <p>출장마사지·스웨디시 지역별 정보 안내</p>
+    </div>
+
+    <a href="/">메인으로 이동</a>
+  </footer>
+
+  <script src="/assets/js/script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
